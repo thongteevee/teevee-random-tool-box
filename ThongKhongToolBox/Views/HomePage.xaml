@@ -1,0 +1,41 @@
+﻿<Page x:Class="ThongKhongToolBox.Views.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:helpers="clr-namespace:ThongKhongToolBox.Helpers"
+      Title="Home"
+      Background="Transparent">
+
+    <Grid Background="{DynamicResource MainBackground}">
+        <Border Margin="40"
+            CornerRadius="18"
+            Background="White"
+            Effect="{StaticResource CardShadow}">
+            <Grid Margin="20">
+                <StackPanel Width="300"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    helpers:StackPanelHelper.Spacing="12">
+
+                    <TextBlock Text="Select a tool:"
+                     FontSize="24"
+                     FontWeight="SemiBold"
+                     Foreground="#FF232526"
+                     TextAlignment="Center"/>
+
+                    <Button x:Name="BtnGotoFormatter"
+                  Content="Date and SSN formatter"
+                  Height="40"
+                  Style="{StaticResource FancyButton}"
+                  Click="BtnGotoFormatter_Click"/>
+
+                    <Button x:Name="BtnGotoButtonTool"
+                  Content="Button tool"
+                  Height="40"
+                  Style="{StaticResource FancyButton}"
+                  Click="BtnGotoButtonTool_Click"/>
+
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>
